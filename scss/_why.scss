@@ -1,0 +1,73 @@
+
+            //why
+
+.why{
+  // height: 80vh;
+  background-color: $LightGrayiBlue;
+  padding: 4rem 8rem;
+
+  &_choose{
+    h5{
+      @include text_design_h;
+    }
+
+    p{
+      @include text_design_p;
+    }
+  }
+
+  &_option{
+    h5{
+      @include text_design_h;
+      font-size: 2rem;
+      margin-top: 2rem;
+    }
+    p{
+      @include text_design_p;
+    }
+    gap: 2rem;
+
+    .one{
+      flex-basis: 23%;
+    }
+
+    .two{
+      flex-basis: 27%;
+      
+    }
+
+    .three{
+      flex-basis: 25%;
+    }
+
+    .four{
+      flex-basis: 25%;
+    }
+  }
+}
+
+
+//responsive for mobile
+.why{
+  @include breakpoint-down(small){
+    padding: 3rem;
+  }
+
+  &_choose{
+    h5{
+      font-size: 2em;
+    }
+  }
+
+  &_option{
+    h5{
+      @include breakpoint-down(small){
+        font-size: 1.5rem;
+      }
+    }
+    @include breakpoint-down(medium){
+      flex-direction: column;
+      flex-basis: 100%;
+    }
+  }
+}

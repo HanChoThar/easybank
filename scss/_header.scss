@@ -1,0 +1,88 @@
+//header
+.header{
+  nav{
+    padding: 22px;
+    // z-index: 9999;
+  }
+
+  &_links a{
+    position: relative;
+    color: $GrayishBlue;
+    font-size: 14px;
+    transition: 0.3s ease-in-out;
+
+    &:not(:last-child){
+      margin-right: 32px;
+    }
+
+    &::before{
+      content: "";
+      // display: block;
+      position: absolute;
+      height: 5px;
+      left: 0;
+      right: 0;
+      bottom: -34px;
+      @include gradient;
+      opacity: 0;
+      transition: 0.3s ease-in-out;
+    }    
+
+    &:hover{
+      color: $darkBlue;
+
+      &::before{
+        opacity: 1;
+        transform: scaleX(1.5);
+      }
+    }
+  }
+
+  &_btn{
+    color: $White;
+    cursor: pointer;
+    padding: 0.875rem 1.875rem;
+    border-radius: 50px;
+    border: none;
+    font-weight: 700;
+    @include gradient;
+    transition: 0.3s ease-in-out;
+
+    &:hover{
+      opacity: 0.75;
+    }
+  }
+
+  .change{
+    display: none;
+  }
+
+  .active{
+    position: absolute;
+    z-index: 9999;
+    top: 70px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-image: linear-gradient($darkBlue, transparent);
+  }
+
+  &-menu{
+    left: 50%;
+    position: absolute;
+    z-index: 9999;
+    width: calc(100% - 3rem);
+    transform: translateX(-50%);
+    margin-top: 1.5rem;
+    background-color: $White;
+    padding: 26px;
+    border-radius: 5px;
+
+    a{
+      text-align: center;
+      padding: 10px;
+      color: $darkBlue;
+      display: block;
+    }
+  }
+}

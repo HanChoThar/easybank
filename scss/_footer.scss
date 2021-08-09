@@ -1,0 +1,44 @@
+.foo{
+  background: $darkBlue;
+  text-align: center;
+  padding: 2rem 0;
+  @include breakpoint-up(medium){
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &_logo{
+
+    margin-bottom: 1rem;
+
+    &_social svg{
+      margin-right: 10px;
+      margin-top: 1rem;
+    }
+  }
+
+  &_links li{
+    @include breakpoint-up(medium){
+      list-style: none;
+      text-align: left;
+    }
+  }
+
+  &_links li a{
+    color: $White;
+    line-height: 2;
+
+   
+  }
+
+  button{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  &_copy{
+    color: $GrayishBlue;
+    font-size: 14px;
+  }
+}

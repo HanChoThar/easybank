@@ -1,0 +1,49 @@
+.article{
+  padding:4rem 7rem;
+  @include breakpoint-down(medium){
+    padding: 2rem;
+    
+  }
+
+  &_heading{
+    font-size: 2rem;
+    color: $darkBlue;
+    margin-bottom: 1rem;
+
+    @include breakpoint-down(medium){
+      text-align: center;
+    }
+  }
+
+  &_main{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+
+    @include breakpoint-down(medium){
+      flex-direction: column;
+      width: 80%;
+      margin-left: 10%;
+    }
+    
+
+
+    &_all{
+      padding: 20px;
+      border: 1px solid gray;
+      border-radius: 5px;
+    
+      
+      h5{
+        @include text_design_h;
+        font-size: 20px;
+      }
+
+      p{
+        @include text_design_p;
+      }
+    }
+  }
+
+
+}

@@ -1,0 +1,51 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.6;
+  font-family: 'Public Sans', sans-serif;
+}
+
+a, a:visited, a:hover{
+  text-decoration: none;
+}
+
+//flexbox
+.flex{
+  display: flex;
+
+  &-jc-sb{
+    justify-content: space-between;
+  }
+
+  &-jc-c{
+    justify-content: center;
+  }
+
+  &-ai-c{
+    align-items: center;
+  }
+}
+
+//visibitity
+.hide-for-mobile{
+  @include breakpoint-down(medium){
+    display: none;
+  }
+};
+
+.hide-for-pc{
+  @include breakpoint-up(large){
+    display: none;
+  }
+}
+
+
+
+
+  
