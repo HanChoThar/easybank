@@ -5,7 +5,7 @@
 
   &_photo{
     position: relative;
-    background: url('/images/bg-intro-mobile.svg');
+    background: url(/images/bg-intro-mobile.svg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -18,7 +18,7 @@
       flex-basis: 50%;
       order: 2;
       height: 655px;
-      background: url('/images/bg-intro-desktop.svg');
+      background: url(/images/bg-intro-desktop.svg);
       background-position: center center;
       background-repeat: no-repeat;
       background-size: 99%;
@@ -29,7 +29,7 @@
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      background-image: url('/images/image-mockups.png');
+      background-image: url(/images/image-mockups.png);
       background-position: center bottom;
       background-repeat: no-repeat;
       background-size: 90%;
